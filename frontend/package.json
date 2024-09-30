@@ -11,10 +11,12 @@
   "dependencies": {
     "@apollo/client": "^3.11.8",
     "@apollo/experimental-nextjs-app-support": "^0.11.3",
+    "@next/font": "^14.2.13",
     "graphql": "^16.9.0",
     "next": "14.2.13",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "sass": "^1.79.4"
   },
   "devDependencies": {
     "@types/node": "^20",

@@ -1,0 +1,33 @@
+.root {
+  @apply py-[31px]
+    px-[153px]
+    pointer-events-none
+    z-10
+    w-full
+    text-black;
+}
+
+.wrapper {
+  @apply flex
+    flex-row
+    justify-between
+    items-center;
+}
+
+.headerText {
+  @apply font-spartan
+    font-bold
+    text-4xl;
+}
+
+.logo {
+  @apply flex
+    gap-4
+    items-center;
+}
+
+.links {
+  @apply flex
+    flex-row
+    gap-[37px];
+}
