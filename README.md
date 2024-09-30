@@ -1,6 +1,7 @@
 # HabitHero™
+*Unleash Your Inner Champion, One Habit at a Time*
 
-<img src="./assets/coverimage.png">
+<img src="assets/coverimage.png">
 
 <hr>
 
@@ -110,7 +111,7 @@ What a user signs up the following should happen:
 
 <hr>
 
-Fin
+<img src="assets/footer.png">
 
 <hr>
 
