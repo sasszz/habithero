@@ -1,0 +1,26 @@
+.root {
+  @apply flex
+    flex-col
+    gap-[28px];
+}
+
+.headerText {
+  @apply font-spartan
+    text-[30px]
+    max-w-[400px]
+    leading-[30px]
+    font-bold;
+}
+
+.input {
+  @apply rounded
+    border
+    border-[#C4C4C4]
+    px-4;
+}
+
+.signUpInput {
+  @apply flex
+    flex-row
+    gap-4;
+}

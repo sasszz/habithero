@@ -1,0 +1,61 @@
+.wrapper {
+  background-color: #00000030;
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+
+  // Initially, the .wrapper is hidden.
+  display: none;
+
+  // Moves the .sidebar to the left side.
+  justify-content: flex-start;
+
+  // Always on top of everything.
+  z-index: 1000;
+
+  // The following rules ensure that,
+  // whenever visible, .wrapper covers
+  // the whole viewport.
+  left: 0;
+  height: 100vh;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+
+  &.visible {
+    display: flex;
+  }
+}
+
+.sidebar {
+  align-items: center;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  max-width: 50%;
+  width: 574px;
+
+  // The animation is achieved by
+  // playing with the value of margin-right
+  transition: margin-left 300ms ease;
+
+  // Initially the .sidebar is hidden.
+  margin-left: -574px;
+
+  &.opened {
+    margin-left: 0;
+  }
+}
+
+.content {
+  @apply flex
+    flex-col
+    h-full
+    px-[26px]
+    gap-[62px]
+    py-[42px];
+}
+
+.closeButton {
+  @apply flex
+    self-end;
+}
