@@ -62,8 +62,6 @@ Initial repository for the backend had package compatibility issues which made i
 
 <hr>
 
-<hr>
-
 ### Testing
 
 The frontend library has Jest unit testing. Run the following command to see the test.
