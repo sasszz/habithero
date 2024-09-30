@@ -7,6 +7,7 @@ import { GET_PLAYERS } from "@/app/queries";
 
 import styles from "./page.module.scss";
 import Link from "next/link";
+import { Button } from "@/components/Button";
 
 const About = () => {
   const { loading, error, data } = useQuery(GET_PLAYERS);
@@ -16,8 +17,8 @@ const About = () => {
 
   return (
     <div className={styles.root}>
-      <Link href="/">Back to home</Link>
-      <p className="text-black">
+      <h3>Emails added to database:</h3>
+      <p>
         {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
         {data.players.map((player: any) => (
           <div key={player.email}>
@@ -25,6 +26,9 @@ const About = () => {
           </div>
         ))}
       </p>
+      <Link href="/">
+        <Button text="Back to Home" />
+      </Link>
     </div>
   );
 };

@@ -23,7 +23,9 @@ export const Header = () => {
           <Link passHref href="/about">
             About
           </Link>
-          <p>Contact</p>
+          <Link passHref href="/contact">
+            Contact
+          </Link>
         </div>
       </div>
     </div>

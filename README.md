@@ -16,7 +16,7 @@ Unleash your potential with **HabitHero™**, the ultimate habit tracking app de
 
 This is a fullstack application with a frontend built with React and Next.js for UI and server-side rendering, styled with TailwindCSS, uses TypeScript for type safety, runs Jest for unit testing, and integrates Apollo GraphQL for data management. The backend of this application uses Prisma for database ORM, SQLite as the database, and GraphQL for managing API queries and mutations.
 
-Current functionality includes a retractable sidebar, email subscription form with frontend data validation, saving a "Player" object to the database, testing, and displaying saved email addresses from the database in the frontend.
+Current functionality includes a retractable sidebar, page routing, email subscription form with frontend data validation, saving a "Player" object to the database, unit testing, and displaying saved email addresses from the database in the frontend.
 
 <hr>
 
@@ -61,6 +61,19 @@ npm run dev
 Initial repository for the backend had package compatibility issues which made it difficult to jumpstart the application. The backend was rebuilt with the spirit of the initial repository, including layout and technologies. This made it easier to use updated packages and ensure compatibility.
 
 <hr>
+
+<hr>
+
+### Testing
+
+The frontend library has Jest unit testing. Run the following command to see the test.
+
+```
+npm test
+```
+
+<hr>
+
 
 ### Frontend Exercise
 

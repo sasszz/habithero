@@ -7,9 +7,11 @@ import clsx from "clsx";
 export const Button = ({
   onClick,
   disabled = false,
+  text = "",
 }: {
-  onClick: () => void;
+  onClick?: () => void;
   disabled?: boolean;
+  text?: string;
 }) => {
   return (
     <button
@@ -17,7 +19,7 @@ export const Button = ({
       onClick={onClick}
       disabled={disabled}
     >
-      <p>Sign Up</p>
+      <p>{text ? text : "Sign Up"}</p>
       <Image src={Arrow} width={13} alt="Right Arrow" />
     </button>
   );
