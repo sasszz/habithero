@@ -1,0 +1,18 @@
+type Query {
+  players: [Player!]!
+}
+
+type Player {
+  id: ID!
+  email: String!
+  validated: Boolean!
+  refCode: String!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type Mutation {
+  createPlayer(email: String!, validated: Boolean, refCode: String!): Player!
+}
+
+scalar DateTime
