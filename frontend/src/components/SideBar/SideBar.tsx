@@ -8,14 +8,17 @@ import { SubscribeForm } from "@/components/SubscribeForm";
 export const SideBar = ({
   opened,
   onClickClose,
+  onSignUpSuccess,
 }: {
   opened: boolean;
   onClickClose: () => void;
+  onSignUpSuccess: () => void;
 }) => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
 
   const handleClose = () => {
     setIsSidebarVisible(false);
+    console.log("close");
     setTimeout(() => onClickClose(), 300);
   };
 
@@ -40,7 +43,10 @@ export const SideBar = ({
           <button onClick={handleClose} className={styles.closeButton}>
             <Image src={Close} width={22} alt="Right Arrow" />
           </button>
-          <SubscribeForm />
+          <SubscribeForm
+            onClickClose={handleClose}
+            onSuccess={onSignUpSuccess}
+          />
         </div>
       </aside>
     </div>

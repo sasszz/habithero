@@ -2,7 +2,13 @@ import React, { useState } from "react";
 import styles from "./SubscribeForm.module.scss";
 import { Button } from "../Button";
 
-export const SubscribeForm = () => {
+export const SubscribeForm = ({
+  onClickClose,
+  onSuccess,
+}: {
+  onClickClose: () => void;
+  onSuccess: () => void;
+}) => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
 
@@ -12,6 +18,9 @@ export const SubscribeForm = () => {
       setError("Please enter a valid email address");
     } else {
       setError("");
+      setEmail("");
+      onSuccess();
+      onClickClose();
     }
   };
 
@@ -40,9 +49,6 @@ export const SubscribeForm = () => {
         <Button
           onClick={() => {
             validateEmail(email);
-            if (!!error) {
-              setEmail("");
-            }
           }}
           disabled={!!error || !email}
         />

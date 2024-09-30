@@ -5,7 +5,13 @@ import { SideBar } from "../SideBar";
 
 export const Body = () => {
   const [isSidebarOpened, setIsSidebarOpened] = useState(false);
+  const [showSignUpButton, setShowSignUpButton] = useState(true);
   const handleOnClickClose = useCallback(() => setIsSidebarOpened(false), []);
+
+  const handleSignUpSuccess = () => {
+    console.log("Sign-up successful at parent level");
+    setShowSignUpButton(false);
+  };
 
   return (
     <div className={styles.root}>
@@ -18,8 +24,14 @@ export const Body = () => {
             }
           </p>
         </div>
-        <Button onClick={() => setIsSidebarOpened(true)} />
-        <SideBar opened={isSidebarOpened} onClickClose={handleOnClickClose} />
+        {showSignUpButton ? (
+          <Button onClick={() => setIsSidebarOpened(true)} />
+        ) : null}
+        <SideBar
+          opened={isSidebarOpened}
+          onClickClose={handleOnClickClose}
+          onSignUpSuccess={handleSignUpSuccess}
+        />
       </div>
     </div>
   );

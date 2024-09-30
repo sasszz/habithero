@@ -6,10 +6,10 @@ import clsx from "clsx";
 
 export const Button = ({
   onClick,
-  disabled,
+  disabled = false,
 }: {
   onClick: () => void;
-  disabled: boolean;
+  disabled?: boolean;
 }) => {
   return (
     <button
