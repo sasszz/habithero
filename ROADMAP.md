@@ -14,28 +14,37 @@ Our HabitHero™ project is divided into several milestones to ensure we stay on
 
 <hr>
 
+### Nice to Haves
+In the future, I would like to tackle this list of functionality for the project:
+- [ ] Server Side Rendering optimization on the frontend
+- [ ] Refactor reusable components such as `<Button/>` to external Storybook UI-Library
+- [ ] Visual regression testing for UI-Library
+- [ ] Implement additional Objects in the backend such as `Referral`, `Action`, `PlayerAction`, `Reward`, `PlayerReward`,`ActionRequirement`
+- [ ] Create database relationships, such as one:many (`Player`:`PlayerAction`) and one:one (`Player`:`Player` via a `Referral`)
+- [ ] Create additional frontend pages to track habits, earn rewards, refer other Players
+- [ ] Light mode + Dark mode and other frontend accessibility features
+- [ ] Automatic build pipeline and `main` and `dev` branches with protections in Github
+- [ ] Deploy application to Vercel
+
+<hr>
+
 ## 📅 Timeline
 
-| Milestone                           | Start Date  | End Date    | Status         | Notes                                                          |
-| ----------------------------------- | ----------- | ----------- | -------------- | -------------------------------------------------------------- |
-| **Phase 1**: Planning               | Sep 27 2024 | Sep 28 2024 | ✅ Completed   | Requirements gathering, brainstorming, and project planning.   |
-| **Phase 2**: Development            | Sep 28 2024 | Sep 30 2024 | ✅ Completed   | Developing core features, setting up infrastructure.           |
-| **Phase 4**: Testing                | Sep 30 2024 | Oct 1 2024  | ✅ Completed   | QA testing, bug fixes, and refinements.                        |
-| **Phase 5**: Launch of Beta         | Oct 1 2024  |             | 🚧 In Progress | Launch of beta version and user testing.                       |
-| **Phase 6**: Feedback Collection    | Oct 1 2024  | Oct 10 2024 | ⏳ Upcoming    | Collect and catalog user feedback                              |
-| **Phase 7**: Additional Development | Oct 1 2024  | Nov 10 2024 | ⏳ Upcoming    | Refining features, addressing beta feedback, and improvements. |
-| **Phase 8**: Final Testing          | Nov 10 2024 | Jan 5 2024  | ⏳ Upcoming    | Final QA, public release preparation, and official launch.     |
-| **Phase 9**: Marketing Campaign     | Dec 5 2024  | Jan 10 2024 | ⏳ Upcoming    | Generate excitement for the upcoming release.                  |
-| **Phase 10**: Public Release        | Jan 10 2025 |             | ⏳ Upcoming    | Official launch!                                               |
+| Milestone                   | Start Date  | End Date    | Status         | Notes                                                        |
+| --------------------------- | ----------- | ----------- | -------------- | ------------------------------------------------------------ |
+| **Phase 1**: Planning       | Sep 27 2024 | Sep 28 2024 | ✅ Completed   | Requirements gathering, brainstorming, and project planning. |
+| **Phase 2**: Development    | Sep 28 2024 | Sep 30 2024 | ✅ Completed   | Developing core features, setting up infrastructure.         |
+| **Phase 4**: Testing        | Sep 30 2024 | Oct 1 2024  | ✅ Completed   | QA testing, bug fixes, and refinements.                      |
+| **Phase 5**: Launch of Beta | Oct 1 2024  |             | 🚧 In Progress | Launch of beta version and user testing.                     |
 
 <hr>
 
 ## 📝 Release Notes
 
-| Version  | Release Date | Highlights                                                            |
-| -------- | ------------ | --------------------------------------------------------------------- |
-| **v1.0** | Oct 1 2024   | 🎉 Initial release with partial functionality including email sign-up. |
-| **v0.9** | Sep 30 2024  | ✨ Beta release for internal testing.                                 |
+| Version  | Release Date | Highlights                                                             |
+| -------- | ------------ | ---------------------------------------------------------------------- |
+| **v1.0** | Oct 1 2024   | 🎉 Beta release with partial functionality including email sign-up. |
+| **v0.9** | Sep 30 2024  | ✨ Internal release for testing.                                  |
 
 <hr>
 
