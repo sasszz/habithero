@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import styles from "./SubscribeForm.module.scss";
 import { Button } from "../Button";
 
@@ -7,11 +6,7 @@ export const SubscribeForm = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
 
-  // @ts-expect-error event type
-  const handleEmailChange = (e) => {
-    const value = e.target.value;
-    setEmail(value);
-
+  const validateEmail = (value: string) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(value)) {
       setError("Please enter a valid email address");
@@ -20,12 +15,19 @@ export const SubscribeForm = () => {
     }
   };
 
+  //@ts-expect-error event type unknown
+  const handleEmailChange = (e) => {
+    setError("");
+    const value = e.target.value;
+    setEmail(value);
+  };
+
   return (
     <div className={styles.root}>
       <h3 className={styles.headerText}>
         {"Subscribe for the latest news,\n learn more and earn rewards"}
       </h3>
-      <hr className="w-full border-[#D7D7D7]" />
+      <hr className={styles.line} />
       <div className={styles.signUpInput}>
         <input
           className={styles.input}
@@ -35,9 +37,17 @@ export const SubscribeForm = () => {
           onChange={handleEmailChange}
           required
         />
-        <Button onClick={() => alert("hi")} disabled={!!error || !email} />
+        <Button
+          onClick={() => {
+            validateEmail(email);
+            if (!!error) {
+              setEmail("");
+            }
+          }}
+          disabled={!!error || !email}
+        />
       </div>
-      {error && <p className="text-red-500">{error}</p>}
+      {error && <p className={styles.error}>{error}</p>}
     </div>
   );
 };

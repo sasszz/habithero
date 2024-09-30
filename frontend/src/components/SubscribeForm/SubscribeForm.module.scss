@@ -12,6 +12,11 @@
     font-bold;
 }
 
+.line {
+  @apply w-full
+    border-[#D7D7D7];
+}
+
 .input {
   @apply rounded
     border
@@ -23,4 +28,8 @@
   @apply flex
     flex-row
     gap-4;
+}
+
+.error {
+  @apply text-red-500;
 }
