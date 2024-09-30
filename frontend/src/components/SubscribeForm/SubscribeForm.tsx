@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./SubscribeForm.module.scss";
 import { Button } from "../Button";
+import { emailRegex } from "@/utils/email";
 
 export const SubscribeForm = ({
   onClickClose,
@@ -13,7 +14,6 @@ export const SubscribeForm = ({
   const [error, setError] = useState("");
 
   const validateEmail = (value: string) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(value)) {
       setError("Please enter a valid email address");
     } else {
