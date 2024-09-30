@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ApolloWrapper } from "./ApolloWrapper";
+import { Header } from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "HabitHero",
@@ -15,6 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Header />
         <ApolloWrapper>{children}</ApolloWrapper>
       </body>
     </html>

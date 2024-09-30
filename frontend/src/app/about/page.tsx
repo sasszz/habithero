@@ -7,7 +7,6 @@ import { GET_PLAYERS } from "@/app/queries";
 
 import styles from "./page.module.scss";
 import Link from "next/link";
-import { Header } from "@/components/Header";
 
 const About = () => {
   const { loading, error, data } = useQuery(GET_PLAYERS);
@@ -16,20 +15,17 @@ const About = () => {
   if (error) return <p>Error: {error.message}</p>;
 
   return (
-    <>
-      <Header />
-      <div className={styles.root}>
-        <Link href="/">Back to home</Link>
-        <p className="text-black">
-          {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-          {data.players.map((player: any) => (
-            <div key={player.email}>
-              <h3>{player.email}</h3>
-            </div>
-          ))}
-        </p>
-      </div>
-    </>
+    <div className={styles.root}>
+      <Link href="/">Back to home</Link>
+      <p className="text-black">
+        {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+        {data.players.map((player: any) => (
+          <div key={player.email}>
+            <h3>{player.email}</h3>
+          </div>
+        ))}
+      </p>
+    </div>
   );
 };
 
