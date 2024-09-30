@@ -1,7 +1,17 @@
 # HabitHero™
-*Unleash Your Inner Champion, One Habit at a Time*
+*Unleash Your Inner Hero, One Habit at a Time*
+
+<hr>
+
+Unleash your potential with **HabitHero™**, the ultimate habit tracking app designed to turn everyday tasks into epic wins! Log your daily habits, track your progress, and earn rewards like streak badges and points for staying consistent and smashing your goals. Whether you're building a new routine or mastering a healthy habit, HabitHero™ keeps you motivated with a powerful scoring system and real-time progress updates. Level up your life by conquering milestones and unlocking achievements—your journey to becoming a habit hero starts today!
+
+<hr>
 
 <img src="assets/coverimage.png">
+
+<hr>
+
+### About the App
 
 <hr>
 
