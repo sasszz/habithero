@@ -1,9 +1,11 @@
-# FullStack Programming Assessment
-Source Inc 🚀 Lucie Chevreuil 👩‍💻 Tuesday, October 1st 🎃
+# HabitHero™
+
+<img src="./assets/coverimage.png">
 
 <hr>
 
 ### Technologies
+
 Frontend 🎨
 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
@@ -30,6 +32,7 @@ node src/index.js
 ```
 
 Terminal 2
+
 ```
 cd frontend
 npm run dev
@@ -38,6 +41,7 @@ npm run dev
 <hr>
 
 ### TO BE ADDED
+
 - [ ] A short explanation of what you built
 - [ ] How to test/demo/run (if applicable)
 - [ ] Any feedback/notes (i.e. if something was hard, easy, confusing, frustrating, etc)
@@ -63,7 +67,6 @@ Implement the following design in the Figma file using [React](https://reactjs.o
 
 <hr>
 
-
 ### Backend Exercise
 
 ```
@@ -73,7 +76,6 @@ FRAMEWORKS: Express, Apollo, NodeJS, etc
 TESTS:      nice to have, but not mandatory
 DOCS:       nice to have, but not mandatory
 ```
-
 
 Create a public GraphQL API using [Apollo Server](https://www.apollographql.com/docs/apollo-server/) and [Prisma](https://www.prisma.io/).
 
@@ -94,7 +96,7 @@ Run the seed file to populate the database.
 
 `npm run prisma:seed`
 
-## The task:
+#### The task:
 
 - Create a `Mutation` for signing up a `Player` by `email`.
 - Create a `Query` for returning the fields required by the application for `Player` by `email`.
@@ -103,5 +105,13 @@ Run the seed file to populate the database.
 What a user signs up the following should happen:
 
 - A `Player` is created
-- Record a `PlayerAction` that the player has performed the `PLAYER_SIGNUP` action 
+- Record a `PlayerAction` that the player has performed the `PLAYER_SIGNUP` action
 - Determine if the `Player` can be granted any rewards based on the action and create a `PlayerReward` record
+
+<hr>
+
+Fin
+
+<hr>
+
+Source Inc 🚀 Lucie Chevreuil 👩‍💻 Tuesday, October 1st 🎃
