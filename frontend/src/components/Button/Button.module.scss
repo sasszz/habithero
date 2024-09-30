@@ -1,0 +1,16 @@
+.root {
+  @apply bg-blue-600
+    hover:bg-blue-700
+    transition
+    ease-in-out
+    duration-300
+    rounded
+    flex
+    gap-[20px]
+    flex-row
+    items-center
+    justify-center
+    text-white
+    py-[15px]
+    px-[25px];
+}

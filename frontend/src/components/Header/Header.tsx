@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import superHeroLogo from "../../assets/logo.png";
+import superHeroLogo from "@/app/assets/logo.png";
 import styles from "./Header.module.scss";
 
-const Header = () => {
+export const Header = () => {
   return (
     <div className={styles.root}>
       <div className={styles.wrapper}>
@@ -24,5 +24,3 @@ const Header = () => {
     </div>
   );
 };
-
-export default Header;

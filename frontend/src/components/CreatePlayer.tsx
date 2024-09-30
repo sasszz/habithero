@@ -2,7 +2,7 @@
 
 import { useMutation } from "@apollo/client";
 import { useState } from "react";
-import { CREATE_PLAYER } from "../queries";
+import { CREATE_PLAYER } from "../app/queries";
 
 export default function CreatePlayerForm() {
   // React state to manage form inputs

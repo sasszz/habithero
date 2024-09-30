@@ -1,0 +1,38 @@
+.root {
+  @apply w-full
+    overflow-hidden
+    items-center
+    overscroll-none
+    flex
+    grow
+    justify-center
+    text-black;
+}
+
+.centerContent {
+  @apply flex
+    items-center
+    gap-[80px]
+    flex-col;
+}
+
+.centerText {
+  @apply flex
+    gap-4
+    items-center
+    flex-col;
+}
+
+.headline {
+  @apply font-spartan
+    font-bold
+    text-center
+    whitespace-pre-line
+    leading-[73px]
+    text-[80px];
+}
+
+.tagline {
+  @apply text-center
+    whitespace-pre-line;
+}
