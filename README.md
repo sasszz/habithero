@@ -5,13 +5,17 @@ _Unleash Your Inner Hero, One Habit at a Time_
 <hr>
 
 Unleash your potential with **HabitHero™**, the ultimate habit tracking app designed to turn everyday tasks into epic wins! 
+
 <hr>
+
 
 <img src="assets/coverimage.png">
 
 <hr>
 
 ### About the App
+
+[View Application Demo here](https://youtu.be/tqX_A48NHFY)
 
 This is a fullstack application with a frontend built with React and Next.js for UI and server-side rendering, styled with TailwindCSS, uses TypeScript for type safety, runs Jest for unit testing, and integrates Apollo GraphQL for data management. The backend of this application uses Prisma for database ORM, SQLite as the database, and GraphQL for managing API queries and mutations.
 
