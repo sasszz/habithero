@@ -14,7 +14,8 @@ With that being said, I compiled a list of tasks I would continue to work on if 
 
 ### Nice to Haves
 In the future, I would like to tackle this list of functionality for the project:
-- [ ] Server Side Rendering optimization on the frontend
+- [ ] Server Side Rendering optimization on the frontend such as caching data returned from API calls
+- [ ] Added Types for Database records like `Player` in frontend to ensure type safety
 - [ ] Fix babel config Jest error
 - [ ] Refactor reusable components such as `<Button/>` to external Storybook UI-Library
 - [ ] Refactor CSS to use all TW vars, and px to rem
