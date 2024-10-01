@@ -16,6 +16,7 @@ export const SideBar = ({
   onSignUpSuccess: () => void;
 }) => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
+  const [isSuccessVisible, setIsSuccessVisible] = useState(false);
 
   const handleClose = () => {
     setIsSidebarVisible(false);
@@ -26,8 +27,14 @@ export const SideBar = ({
   useEffect(() => {
     if (opened) {
       setIsSidebarVisible(true);
+      setIsSuccessVisible(false);
     }
   }, [opened]);
+
+  const handleSignUpSuccess = () => {
+    setIsSuccessVisible(true);
+    onSignUpSuccess();
+  };
 
   return (
     <div
@@ -44,11 +51,13 @@ export const SideBar = ({
           <button onClick={handleClose} className={styles.closeButton}>
             <Image src={Close} width={22} alt="Close" />
           </button>
-          {/* <SubscribeForm
-            onClickClose={handleClose}
-            onSuccess={onSignUpSuccess}
-          /> */}
-          <SuccessForm />
+          {isSuccessVisible ? (
+            <SuccessForm onClickClose={onClickClose} />
+          ) : (
+            <SubscribeForm
+              onSuccess={handleSignUpSuccess}
+            />
+          )}
         </div>
       </aside>
     </div>

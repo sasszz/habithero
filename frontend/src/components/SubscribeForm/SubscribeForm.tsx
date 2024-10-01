@@ -5,27 +5,20 @@ import { emailRegex } from "@/utils/email";
 
 import { useMutation } from "@apollo/client";
 import { CREATE_PLAYER } from "@/app/queries";
+import { generateReferralCode } from "@/utils/referralcode";
 
-export const SubscribeForm = ({
-  onClickClose,
-  onSuccess,
-}: {
-  onClickClose: () => void;
-  onSuccess: () => void;
-}) => {
+export const SubscribeForm = ({ onSuccess }: { onSuccess: () => void }) => {
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState("");
 
   // Implement at a later time
-  const refCode = "Referral Code";
+  const refCode = generateReferralCode();
   const validated = true;
 
   const [createPlayer] = useMutation(CREATE_PLAYER);
 
-  // Handle form submission
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  // Modify handleSubmit to remove the event argument
   const handleSubmit = async () => {
+    console.log("handleSubmit");
     try {
       await createPlayer({
         variables: {
@@ -34,6 +27,9 @@ export const SubscribeForm = ({
           validated,
         },
       });
+      console.log("after await");
+      setEmail("");
+      onSuccess();
     } catch (err) {
       console.error("Error creating player:", err);
     }
@@ -42,11 +38,9 @@ export const SubscribeForm = ({
   const validateEmail = (value: string) => {
     if (!emailRegex.test(value)) {
       setEmailError("Please enter a valid email address");
+      return false;
     } else {
       setEmailError("");
-      setEmail("");
-      onSuccess();
-      onClickClose();
     }
   };
 
@@ -76,7 +70,7 @@ export const SubscribeForm = ({
           onClick={() => {
             validateEmail(email);
             if (!emailError && email) {
-              handleSubmit(); // Call handleSubmit after validation passes
+              handleSubmit();
             }
           }}
           disabled={!!emailError || !email}

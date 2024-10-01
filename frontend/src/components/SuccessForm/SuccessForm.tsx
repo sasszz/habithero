@@ -7,7 +7,7 @@ import Image from "next/image";
 import { Button } from "../Button";
 import { CopyCode } from "../CopyCode";
 
-const SuccessForm = () => {
+const SuccessForm = ({ onClickClose }: { onClickClose: () => void }) => {
   return (
     <div className={styles.root}>
       <h3 className={styles.headerText}>{"Great job!\n Your progress:"}</h3>
@@ -33,7 +33,7 @@ const SuccessForm = () => {
       </div>
       <hr className={styles.line} />
       <div>
-        <Button onClick={() => alert("hello")} text="Close" />
+        <Button onClick={onClickClose} text="Close" />
       </div>
     </div>
   );
