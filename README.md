@@ -63,7 +63,7 @@ Initial repository for the backend had package compatibility issues which made i
 <hr>
 
 ### Folder Structure
-
+```
 .
 ├── frontend
 │   ├── src                # Holds frontend application
@@ -77,7 +77,7 @@ Initial repository for the backend had package compatibility issues which made i
 ├── server
 │   ├── prisma             # Database and schema
 │   ├── src                # GraphQL resolvers and Apollo Server
-
+```
 <hr>
 
 ### Testing
