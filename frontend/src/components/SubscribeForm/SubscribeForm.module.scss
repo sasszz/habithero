@@ -1,6 +1,8 @@
 .root {
   @apply flex
     flex-col
+    h-full
+    w-full
     gap-[28px];
 }
 

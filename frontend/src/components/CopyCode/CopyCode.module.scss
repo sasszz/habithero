@@ -1,0 +1,30 @@
+.root {
+  @apply flex
+    flex-col
+    gap-2;
+}
+
+.wrapper {
+  @apply flex
+    items-center
+    border-2
+    border-[#1F60E9]
+    rounded-lg
+    px-[16px]
+    py-[8px]
+    w-full
+    max-w-lg;
+}
+
+.readOnlyInput {
+  @apply flex-grow
+    text-sm
+    border-none
+    outline-none
+    text-[#1F60E9];
+}
+
+.copyButton {
+  @apply bg-transparent
+    rounded-lg;
+}

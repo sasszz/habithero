@@ -3,6 +3,9 @@ import styles from "./SubscribeForm.module.scss";
 import { Button } from "../Button";
 import { emailRegex } from "@/utils/email";
 
+import { useMutation } from "@apollo/client";
+import { CREATE_PLAYER } from "@/app/queries";
+
 export const SubscribeForm = ({
   onClickClose,
   onSuccess,
@@ -11,13 +14,36 @@ export const SubscribeForm = ({
   onSuccess: () => void;
 }) => {
   const [email, setEmail] = useState("");
-  const [error, setError] = useState("");
+  const [emailError, setEmailError] = useState("");
+
+  // Implement at a later time
+  const refCode = "Referral Code";
+  const validated = true;
+
+  const [createPlayer] = useMutation(CREATE_PLAYER);
+
+  // Handle form submission
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // Modify handleSubmit to remove the event argument
+  const handleSubmit = async () => {
+    try {
+      await createPlayer({
+        variables: {
+          email,
+          refCode,
+          validated,
+        },
+      });
+    } catch (err) {
+      console.error("Error creating player:", err);
+    }
+  };
 
   const validateEmail = (value: string) => {
     if (!emailRegex.test(value)) {
-      setError("Please enter a valid email address");
+      setEmailError("Please enter a valid email address");
     } else {
-      setError("");
+      setEmailError("");
       setEmail("");
       onSuccess();
       onClickClose();
@@ -26,7 +52,7 @@ export const SubscribeForm = ({
 
   //@ts-expect-error event type unknown
   const handleEmailChange = (e) => {
-    setError("");
+    setEmailError("");
     const value = e.target.value;
     setEmail(value);
   };
@@ -49,11 +75,14 @@ export const SubscribeForm = ({
         <Button
           onClick={() => {
             validateEmail(email);
+            if (!emailError && email) {
+              handleSubmit(); // Call handleSubmit after validation passes
+            }
           }}
-          disabled={!!error || !email}
+          disabled={!!emailError || !email}
         />
       </div>
-      {error && <p className={styles.error}>{error}</p>}
+      {emailError && <p className={styles.error}>{emailError}</p>}
     </div>
   );
 };

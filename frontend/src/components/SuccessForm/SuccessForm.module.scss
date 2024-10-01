@@ -1,0 +1,57 @@
+.root {
+  @apply flex
+    flex-col
+    h-full
+    w-full
+    gap-[28px];
+}
+
+.headerText {
+  @apply font-spartan
+    text-[30px]
+    leading-[30px]
+    font-bold;
+}
+
+.pointsContainer {
+  @apply flex
+    flex-row
+    gap-2;
+}
+
+.pointsText {
+  @apply font-spartan
+    font-bold
+    text-[36px];
+}
+
+.pointsEarned {
+  @apply text-xs;
+}
+
+.plusTenGroup {
+  @apply flex
+    flex-row
+    text-sm
+    gap-2;
+}
+
+.inboxGroup {
+  @apply bg-[#F9F9F9]
+    py-5
+    flex
+    flex-row
+    gap-5
+    rounded
+    px-7;
+}
+
+.inboxText {
+  @apply font-extrabold
+    text-[#959595];
+}
+
+.line {
+  @apply w-full
+    border-[#D7D7D7];
+}

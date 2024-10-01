@@ -4,6 +4,7 @@ import Image from "next/image";
 import Close from "@/app/assets/close.svg";
 import clsx from "clsx";
 import { SubscribeForm } from "@/components/SubscribeForm";
+import SuccessForm from "../SuccessForm/SuccessForm";
 
 export const SideBar = ({
   opened,
@@ -41,12 +42,13 @@ export const SideBar = ({
       >
         <div className={styles.content}>
           <button onClick={handleClose} className={styles.closeButton}>
-            <Image src={Close} width={22} alt="Right Arrow" />
+            <Image src={Close} width={22} alt="Close" />
           </button>
-          <SubscribeForm
+          {/* <SubscribeForm
             onClickClose={handleClose}
             onSuccess={onSignUpSuccess}
-          />
+          /> */}
+          <SuccessForm />
         </div>
       </aside>
     </div>
