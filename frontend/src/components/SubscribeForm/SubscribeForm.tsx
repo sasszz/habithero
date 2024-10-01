@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import styles from "./SubscribeForm.module.scss";
 import { Button } from "../Button";
-import { emailRegex } from "@/utils/email";
 
 import { useMutation } from "@apollo/client";
 import { CREATE_PLAYER } from "@/app/queries";
-import { generateReferralCode } from "@/utils/referralcode";
+import { emailRegex } from "@/app/utils/email";
+import { generateReferralCode } from "@/app/utils/referralcode";
 
 export const SubscribeForm = ({ onSuccess }: { onSuccess: () => void }) => {
   const [email, setEmail] = useState("");

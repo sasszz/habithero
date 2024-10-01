@@ -62,10 +62,35 @@ Initial repository for the backend had package compatibility issues which made i
 
 <hr>
 
+### Folder Structure
+
+.
+├── frontend
+│   ├── src                # Holds frontend application
+│        ├── components    # UI Components
+│        └── app           # Holds frontend application
+|             ├── about    # Nextjs Route to `/about`
+|             ├── assets   # Folder of images
+|             ├── contact  # Nextjs Route to `/contact`
+|             └── utils    # Utils and Jest tests
+|
+├── server
+│   ├── prisma             # Database and schema
+│   ├── src                # GraphQL resolvers and Apollo Server
+
+<hr>
+
 ### Testing
 
-The frontend library has Jest unit testing. Run the following command to see the test.
+The frontend library has Jest unit testing. There is currently an issue with conflicting babel configurations. In order to run Jest tests, create a file `babel.config.js` in the `src` folder. Run the following command to see the test. Delete `babel.config.js` to run regular application.
 
+```
+module.exports = {
+  presets: ["@babel/preset-env"],
+};
+```
+
+Run Jest test with this command:
 ```
 npm test
 ```

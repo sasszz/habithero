@@ -1,4 +1,4 @@
-import { emailRegex } from "./email";
+import { emailRegex } from './email';
 
 describe("emailRegex Utility Function", () => {
   it("should return true for valid email addresses", () => {
