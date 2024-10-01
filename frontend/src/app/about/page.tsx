@@ -10,7 +10,9 @@ import Link from "next/link";
 import { Button } from "@/components/Button";
 
 const About = () => {
-  const { loading, error, data } = useQuery(GET_PLAYERS);
+  const { loading, error, data } = useQuery(GET_PLAYERS, {
+    pollInterval: 1000, // Poll every 1 second
+  });
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
