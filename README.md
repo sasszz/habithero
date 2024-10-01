@@ -4,8 +4,7 @@ _Unleash Your Inner Hero, One Habit at a Time_
 
 <hr>
 
-Unleash your potential with **HabitHero™**, the ultimate habit tracking app designed to turn everyday tasks into epic wins! Log your daily habits, track your progress, and earn rewards like streak badges and points for staying consistent and smashing your goals. Whether you're building a new routine or mastering a healthy habit, HabitHero™ keeps you motivated with a powerful scoring system and real-time progress updates. Level up your life by conquering milestones and unlocking achievements—your journey to becoming a habit hero starts today!
-
+Unleash your potential with **HabitHero™**, the ultimate habit tracking app designed to turn everyday tasks into epic wins! 
 <hr>
 
 <img src="assets/coverimage.png">
@@ -76,14 +75,15 @@ Initial repository for the backend had package compatibility issues which made i
 |
 ├── server
 │   ├── prisma             # Database and schema
-│   ├── src                # GraphQL resolvers and Apollo Server
+│   └── src                # GraphQL resolvers and Apollo Server
 ```
 <hr>
 
 ### Testing
 
-The frontend library has Jest unit testing. There is currently an issue with conflicting babel configurations. In order to run Jest tests, create a file `babel.config.js` in the `src` folder. Run the following command to see the test. Delete `babel.config.js` to run regular application.
+The frontend library has Jest unit testing. There is currently an issue with conflicting babel configurations. In order to run Jest tests, create a file `babel.config.js` in the `src` folder. Run the test command in a new terminal in `frontend` to see the test. Delete `babel.config.js` to run regular application.
 
+ `babel.config.js` :
 ```
 module.exports = {
   presets: ["@babel/preset-env"],
