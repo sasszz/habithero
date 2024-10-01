@@ -17,6 +17,7 @@ export const SideBar = ({
 }) => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
   const [isSuccessVisible, setIsSuccessVisible] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const handleClose = () => {
     setIsSidebarVisible(false);
@@ -28,12 +29,17 @@ export const SideBar = ({
     if (opened) {
       setIsSidebarVisible(true);
       setIsSuccessVisible(false);
+      setIsTransitioning(false);
     }
   }, [opened]);
 
   const handleSignUpSuccess = () => {
-    setIsSuccessVisible(true);
-    onSignUpSuccess();
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setIsSuccessVisible(true);
+      setIsTransitioning(false);
+      onSignUpSuccess();
+    }, 300);
   };
 
   return (
@@ -51,13 +57,17 @@ export const SideBar = ({
           <button onClick={handleClose} className={styles.closeButton}>
             <Image src={Close} width={22} alt="Close" />
           </button>
-          {isSuccessVisible ? (
-            <SuccessForm onClickClose={onClickClose} />
-          ) : (
-            <SubscribeForm
-              onSuccess={handleSignUpSuccess}
-            />
-          )}
+          <div
+            className={clsx(styles.formWrapper, {
+              [styles.transitioning]: isTransitioning, // Apply animation class during transition
+            })}
+          >
+            {isSuccessVisible ? (
+              <SuccessForm onClickClose={onClickClose} />
+            ) : (
+              <SubscribeForm onSuccess={handleSignUpSuccess} />
+            )}
+          </div>
         </div>
       </aside>
     </div>
