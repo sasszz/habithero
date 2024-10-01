@@ -5,9 +5,31 @@
     overscroll-none
     flex-col
     h-screen
-    gap-6
+    gap-10
     flex
     grow
     justify-center
+    font-spartan
     text-black;
+}
+
+.centerTextBlock {
+  @apply flex
+    flex-col
+    items-center
+    justify-center
+    gap-2;
+}
+
+.listEntry {
+  @apply flex
+    flex-row
+    gap-4;
+}
+
+.title {
+  @apply text-xl
+    font-bold
+    text-center
+    max-w-[200px];
 }

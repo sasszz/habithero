@@ -17,6 +17,11 @@ export const SubscribeForm = ({ onSuccess }: { onSuccess: () => void }) => {
 
   const [createPlayer] = useMutation(CREATE_PLAYER);
 
+  console.log(email);
+  console.log(refCode);
+  console.log(validated);
+  console.log(emailError);
+
   const handleSubmit = async () => {
     console.log("handleSubmit");
     try {
@@ -67,8 +72,8 @@ export const SubscribeForm = ({ onSuccess }: { onSuccess: () => void }) => {
           required
         />
         <Button
-          onClick={() => {
-            validateEmail(email);
+          onClick={async () => {
+            await validateEmail(email);
             if (!emailError && email) {
               handleSubmit();
             }
