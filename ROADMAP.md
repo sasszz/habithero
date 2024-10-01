@@ -4,20 +4,20 @@ _Unleash Your Inner Hero, One Habit at a Time_
 
 <hr>
 
-### 🚀 Project Roadmap
+There is a lot I wish I could have gotten to, but due to the time constraint, I prioritized main functionality and building a UI optimized for the browser. I would definitely go back and refactor the code to be more uniform, such as changing `px` to `rem` and standardizing all CSS to Tailwind variables. I also wish I could have implemented additional database schemas and functionality. I am confident that with more time I would have been able to implement the other types of Records.
 
-Our HabitHero™ project is divided into several milestones to ensure we stay on track and deliver a high-quality habit-tracking app. Below is an outline of our progress and future goals, as we build a powerful tool for users to track, maintain, and be rewarded for their daily habits.
+Overall, I'm very proud of this application, as I have never worked with Prisma and GraphQL prior and I have a working prototype. I also see that my frontend skills have greatly improved, as I have learned which technologies are industry standard and are best to use.
 
-<hr>
-
-<img src="assets/roadmap.png">
+With that being said, I compiled a list of tasks I would continue to work on if I had more time
 
 <hr>
 
 ### Nice to Haves
 In the future, I would like to tackle this list of functionality for the project:
 - [ ] Server Side Rendering optimization on the frontend
+- [ ] Fix babel config Jest error
 - [ ] Refactor reusable components such as `<Button/>` to external Storybook UI-Library
+- [ ] Refactor CSS to use all TW vars, and px to rem
 - [ ] Visual regression testing for UI-Library
 - [ ] Implement additional Objects in the backend such as `Referral`, `Action`, `PlayerAction`, `Reward`, `PlayerReward`,`ActionRequirement`
 - [ ] Create database relationships, such as one:many (`Player`:`PlayerAction`) and one:one (`Player`:`Player` via a `Referral`)
@@ -25,6 +25,16 @@ In the future, I would like to tackle this list of functionality for the project
 - [ ] Light mode + Dark mode and other frontend accessibility features
 - [ ] Automatic build pipeline and `main` and `dev` branches with protections in Github
 - [ ] Deploy application to Vercel
+
+<hr>
+
+### 🚀 Project Roadmap
+
+Below is an outline of our progress and future goals, as we build a powerful tool for users to track, maintain, and be rewarded for their daily habits.
+
+<hr>
+
+<img src="assets/roadmap.png">
 
 <hr>
 
