@@ -4,11 +4,11 @@ _Unleash Your Inner Hero, One Habit at a Time_
 
 <hr>
 
-There is a lot I wish I could have gotten to, but due to the time constraint, I prioritized main functionality and building a UI optimized for the browser. I would definitely go back and refactor the code to be more uniform, such as changing `px` to `rem` and standardizing all CSS to Tailwind variables. I also wish I could have implemented additional database schemas and functionality. I am confident that with more time I would have been able to implement the other types of Records.
+There is a lot I wish I could have gotten to, but due to the time constraint, I prioritized main functionality and building a UI optimized for the browser. I would definitely go back and refactor the code to be more uniform, such as changing `px` to `rem`, standardizing all CSS to Tailwind variables and ordering imports in the same way with an ESLint rule. I also wish I could have implemented additional database schemas and API functionality. I am confident that with more time I would have been able to implement the other types of Records.
 
-Overall, I'm very proud of this application, as I have never worked with Prisma and GraphQL prior and I have a working prototype. I also see that my frontend skills have greatly improved, as I have learned which technologies are industry standard and are best to use.
+Overall, I'm very proud of this application, as I have never worked with Prisma and GraphQL prior and yet I was able to create a working prototype. I also see that my frontend skills have greatly improved, as I have learned which technologies are industry standard and are best to use.
 
-With that being said, I compiled a list of tasks I would continue to work on if I had more time
+With that being said, I compiled a list of tasks I would continue to work on if I had more time!
 
 <hr>
 
@@ -59,3 +59,11 @@ Below is an outline of our progress and future goals, as we build a powerful too
 <hr>
 
 Stay tuned for updates! 😊
+
+<hr>
+
+<img src="assets/footer.png">
+
+<hr>
+
+Source Inc 🚀 Lucie Chevreuil 👩‍💻 Tuesday, October 1st 🎃
